@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crash</title>
+</head>
+<body>
+    <g>
+    <select id="SelectAxeHorizontal">
+        <option disabled selected>Axe horizontal</option>
+        <option value="kmSemaine">Kilomètres par semaine</option>
+        <option value="accidents">Accidents</option>
+        <option value="accidentsMortels">Accidents mortels</option>
+        <option value="morts">Morts</option>
+    </select>
+
+    <select id="SelectAxeVertical">
+        <option disabled selected>Axe vertical</option>
+        <option value="kmSemaine">Kilomètres par semaine</option>
+        <option value="accidents">Accidents</option>
+        <option value="accidentsMortels">Accidents mortels</option>
+        <option value="morts">Morts</option>
+    </select>
+
+    <select id="SelectPeriodeTemp">
+        <option disabled selected>Période temporelle</option>
+        <option value="0">1985 à 2000</option>
+        <option value="1">1985 à 2014</option>
+        <option value="2">2000 à 2014</option>
+    </select>
+
+    <select id="SelectCompagnie">
+        <option disabled selected>Compagnie aérienne</option>
+    </select>
+    </g><br>
+    <svg id="canevas"></svg><br>
+    <p id="texte"></p>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js'></script>
+	<script src='script.js' charset='utf-8'></script>
+</body>
+</html>

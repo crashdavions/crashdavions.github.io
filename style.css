@@ -1,0 +1,26 @@
+#canevas{
+    /*border: black 1px solid;*/
+    margin-top:20px;
+}
+
+body{
+    font-family:monospace;
+}
+
+#texte{
+    font-size:12pt;
+}
+
+#infoMoy{
+    font-size:6pt;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: #ffffff;
+    border-radius: 4px;
+    pointer-events: none;
+}

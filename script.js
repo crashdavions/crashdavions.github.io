@@ -151,7 +151,7 @@ d3.csv("crash.csv", function(d) {
         .attr("class", "axe")
         .attr("id","axeHorizontal")
         .call(axeX.tickFormat(function(number) {
-            return number > 999 ? d3.format(".0s") : d3.format("asdg")
+            return number > 999 ? d3.format(".0s") : d3.format("")
         }));
     
         svg.append("g")
@@ -159,7 +159,7 @@ d3.csv("crash.csv", function(d) {
         .attr("class","axe")
         .attr("id","axeVertical")
         .call(axeY.tickFormat(function(number) {
-            return number > 999 ? d3.format(".0s") : d3.format("asdg")
+            return number > 999 ? d3.format(".0s") : d3.format("")
         }));}
 
         //La deuxième fois, on fait juste une transition

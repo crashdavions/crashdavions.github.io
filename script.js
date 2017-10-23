@@ -151,8 +151,8 @@ d3.csv("crash.csv", function(d) {
         .attr("class", "axe")
         .attr("id","axeHorizontal")
         .call(axeX.tickFormat(function(number) {
-            if( number > 999) return d3.format(".0s")
-            else return d3.format("");
+            var specifier = number > 999 ? d3.format(".0s") : d3.format("");
+            return specifier(number);
         }));
     
         svg.append("g")
@@ -160,8 +160,8 @@ d3.csv("crash.csv", function(d) {
         .attr("class","axe")
         .attr("id","axeVertical")
         .call(axeY.tickFormat(function(number) {
-            if( number > 999) return d3.format(".0s")
-            else return d3.format("");
+            var specifier = number > 999 ? d3.format(".0s") : d3.format("");
+            return specifier(number);
         }));}
 
         //La deuxième fois, on fait juste une transition
@@ -169,14 +169,14 @@ d3.csv("crash.csv", function(d) {
         svg.select("#axeHorizontal").transition()
         .duration(500)
         .call(axeX.tickFormat(function(number) {
-            if( number > 999) return d3.format(".0s")
-            else return d3.format("");        }));
+            var specifier = number > 999 ? d3.format(".0s") : d3.format("");
+            return specifier(number);       }));
     
         svg.select("#axeVertical").transition()
         .duration(500)
         .call(axeY.tickFormat(function(number) {
-            if( number > 999) return d3.format(".0s")
-            else return d3.format("");        }));}
+            var specifier = number > 999 ? d3.format(".0s") : d3.format("");
+            return specifier(number);        }));}
 
         //Initialisation des variables pour les différents éléments
         var cercles = svg.selectAll("circle").data(data);
